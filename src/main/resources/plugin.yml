@@ -1,0 +1,23 @@
+name: SpawnOnJoin
+version: 0.0.2
+author: TheLegoBros3
+main: SpawnOnJoin
+api-version:  1.17
+description: Teleports joining players to the world spawn
+prefix: SpawnOn
+permissions:
+  SpawnOn.*:
+    description: Wildcard permssion
+    default: op
+  SpawnOn.op:
+    default: op
+    description: Can use /states command
+  SpawnOn.bypass:
+    default: false
+    description: Won't be teleported on join
+commands:
+  status:
+    description: Status of plugin
+    permission: SpawnOn.op
+    permission-message: That's not allowed.
+    usage: "Usage: /<command>"

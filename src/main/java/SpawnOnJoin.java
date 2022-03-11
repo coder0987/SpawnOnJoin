@@ -18,7 +18,8 @@ public class SpawnOnJoin extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         final Player player = event.getPlayer();
-        player.teleport(getServer().getWorlds().get(0).getSpawnLocation());
+        if (!player.hasPermission("SpawnOn.bypass"))
+            player.teleport(getServer().getWorlds().get(0).getSpawnLocation());
     }
 
     @Override
